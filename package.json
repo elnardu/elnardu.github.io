@@ -7,6 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev"
+    "dev": "vuepress dev src",
+    "build": "vuepress dev src"
+  },
+  "dependencies": {
+    "vuepress": "^1.2.0"
   }
 }
