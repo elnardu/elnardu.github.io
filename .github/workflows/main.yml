@@ -21,7 +21,7 @@ jobs:
       env:
         CI: true
     - name: Push
-      run: ./scrips/ci_deploy.sh
+      run: ./scripts/ci_deploy.sh
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
