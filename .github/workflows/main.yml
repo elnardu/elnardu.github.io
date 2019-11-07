@@ -16,21 +16,13 @@ jobs:
         node-version: 10.x
     - name: Install Vuepress
       run: npm install -g vuepress@^1.2.0
-    - name: Clone
-      run: |
-        cd src/.vuepress/
-        git clone https://github.com/elnardu/elnardu.github.io dist
-        cd dist
-        git checkout master
-        rm *
     - name: Build Vuepress
       run: npm run build
       env:
         CI: true
     - name: Push
-      run: |
-        cd src/.vuepress/dist
-        git add -A
-        git push -u origin master --force
+      run: ./scrips/ci_deploy.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
