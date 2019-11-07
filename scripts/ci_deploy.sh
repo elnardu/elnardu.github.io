@@ -17,5 +17,6 @@ cp -r src/.vuepress/dist/* dist/
 pushd dist
 git add -A
 git commit -m "Website"
+echo "Pushing to github with TOKEN: $GITHUB_TOKEN"
 git -c http.extraheader="AUTHORIZATION: basic $GITHUB_TOKEN" push -u origin master --force
 popd
