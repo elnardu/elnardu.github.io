@@ -1,0 +1,12 @@
+{
+  "name": "elnardu.github.io",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/elnardu/elnardu.github.io.git",
+  "author": "Elnard Utiushev",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev"
+  }
+}
