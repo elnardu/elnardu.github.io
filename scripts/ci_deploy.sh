@@ -5,7 +5,7 @@ set -e
 git config --global user.email "elnardu2@gmail.com"
 git config --global user.name "Elnard Utiushev"
 
-git clone https://github.com/elnardu/elnardu.github.io dist
+git clone https://elnardu:$GITHUB_TOKEN@github.com/elnardu.github.io.git dist
 
 pushd dist
 git checkout master
@@ -17,6 +17,5 @@ cp -r src/.vuepress/dist/* dist/
 pushd dist
 git add -A
 git commit -m "Website"
-echo "Pushing to github with TOKEN: $GITHUB_TOKEN"
-git -c http.extraheader="AUTHORIZATION: basic $GITHUB_TOKEN" push -u origin master --force
+git push -u origin master --force
 popd
